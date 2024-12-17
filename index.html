@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Language Switcher -->
+  <div id="language-switcher">
+    <label for="language">Language:</label>
+    <select id="language" onchange="switchLanguage()">
+      <option value="en">English</option>
+      <option value="th">ไทย</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <h1 id="title">Make your account</h1>
+    <!-- Username Input -->
+    <input type="text" id="username" placeholder="Enter your username"><br>
+
+    <!-- Password Input -->
+    <input type="password" id="password" placeholder="Enter your password">
+    <div id="feedback"></div>
+
+    <!-- Strength Bar -->
+    <div class="strength-bar">
+      <div id="strength"></div>
+    </div>
+
+    <!-- Confirm Button -->
+    <button id="submit-btn">Confirm</button>
+    <div id="result"></div>
+
+    <!-- Password Tips -->
+    <div id="password-tips" style="display: none;">
+      <strong id="tips-title">Tips for creating a strong password:</strong>
+      <ul id="tips-list" style="text-align: left; padding-left: 20px;">
+        <li>Use at least 12 characters.</li>
+        <li>Include uppercase and lowercase letters.</li>
+        <li>Add numbers (0-9).</li>
+        <li>Use special characters (e.g., !@#$%^&*).</li>
+        <li>Avoid using personal information or common words.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
